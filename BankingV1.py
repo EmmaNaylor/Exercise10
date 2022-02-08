@@ -2,7 +2,7 @@ pin = "sausages"
 attempts = 3
 failedSecQ = 0
 
-print("Please note - your pin is case sensitive \nIf you would like to reset your pin - please hit enter without submitting a value")
+print("Please note - your pin is case sensitive \nIf you would like to reset your pin - please hit enter")
 
 while attempts > 0:
     supplied_pin = input("Enter your PIN: ")
@@ -16,10 +16,10 @@ while attempts > 0:
                 print("This is not going very well... please enter something")
             elif forgotPin.lower() == "yes":
                 if failedSecQ == 1:
-                    print("I told you - you only had one attempt at the security question - enter your pin or get lost.")
+                    print("I told you - you only had one attempt at the security question. Enter your pin or get lost.")
                 else:
-                    secQuestion = input(
-                        "OK. I will ask your back up security question. Please note you will have only 1 attempt\nWhat is the name of your best friend's dog? ")
+                    print("OK. I will ask your back up security question. Please note you will have only 1 attempt!\n")
+                    secQuestion = input("What is the name of your best friend's dog? ")
                     if not secQuestion:
                         print("Please enter something...")
                     elif secQuestion.lower() == "ozzy":

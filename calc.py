@@ -1,28 +1,28 @@
 print("Welcome to the calculator app!\n")
 
-firstnum = float(input("Please enter a number: "))
+firstNum = float(input("Please enter a number: "))
 action = input("Please enter an action: ")
-secondnum = float(input("Please enter a second number: "))
+secondNum = float(input("Please enter a second number: "))
 
 confirm = ""
 
-while confirm != "yes":
-    print("You asked me to calculate " + str(firstnum) + " " + action + " " + str(secondnum))
+while confirm.lower() != "yes":
+    print("You asked me to calculate " + str(firstNum) + " " + action + " " + str(secondNum))
     confirm = input("... Is that right? ")
-    if confirm != "yes":
+    if confirm.lower() != "yes":
         print("Okay no problem, let's start again")
         break
 
 
 if action == "+":
-    answer = firstnum + secondnum
+    answer = firstNum + secondNum
     print("The answer is: " + str(answer))
 elif action == "-":
-    answer = firstnum - secondnum
+    answer = firstNum - secondNum
     print("The answer is: " + str(answer))
 elif action == "*":
-    answer = firstnum * secondnum
+    answer = firstNum * secondNum
     print("The answer is: " + str(answer))
 elif action == "/":
-    answer = firstnum / secondnum
+    answer = firstNum / secondNum
     print("The answer is: " + str(answer))

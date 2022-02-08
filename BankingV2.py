@@ -3,7 +3,7 @@ import getpass
 pin = "sausages"
 attempts = 3
 
-print("Please note - your pin is case sensitive \nIf you would like to reset your pin - please hit enter without submitting a value")
+print("Please note - your pin is case sensitive \nIf you would like to reset your pin - please hit enter")
 
 while attempts > 0:
     supplied_pin = getpass.getpass("Enter your PIN: ")
@@ -12,7 +12,8 @@ while attempts > 0:
         if not forgotPin:
             print("This is not going very well... please enter something")
         elif forgotPin.lower() == "yes":
-            secQuestion = input("OK. I will ask your back up security question. \nWhat is the name of your best friend's dog? ")
+            print("OK. I will ask your back up security question. Please note you will have only 1 attempt!\n")
+            secQuestion = input("What is the name of your best friend's dog? ")
             if not secQuestion:
                 print("Please enter something...")
             elif secQuestion.lower() != "ozzy":
